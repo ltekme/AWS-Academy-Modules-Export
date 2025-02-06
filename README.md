@@ -13,15 +13,18 @@ let kC = {};
 let lab = {};
 
 for(let tempItem of items){
-    let moduleItems = tempItem.children[2].children[0].children
+    let moduleItems = tempItem.children[2].children[0].children;
     for (let mi2 of moduleItems) {
         let mi3 = mi2.children[0]?.getElementsByClassName("module-item-title")[0].children[0].children[0];
         let itemName = mi3?.textContent.trim();
         let itemUrl = mi3?.href;
-        if (itemName.indexOf("Lab:") !== -1){
+        if (mi3 === undefined) {
+            continue
+        }
+        if (itemName?.indexOf("Lab") !== -1){
              lab[itemName] = itemUrl;
         }
-        if (itemName.indexOf("Knowledge Check") !== -1) {
+        if (itemName?.indexOf("Knowledge Check") !== -1) {
             kC[itemName] = itemUrl;
         }
     }
@@ -42,8 +45,8 @@ console.log(itemsList.join("\n"));
 
 ## Useage
 
-1. Open the module you want to export 
-2. Open developer console and goto the consoel tab
+1. Open the module tab of the course you want to export 
+2. Open developer console and goto the console
 3. type in `allow pasting` to allow pasting cde into the console
 4. Copy the code above and paste it into the console
 
