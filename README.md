@@ -45,10 +45,11 @@ console.log(itemsList.join("\n"));
 
 ## Useage
 
-1. Open the module tab of the course you want to export 
-2. Open developer console and goto the console
-3. type in `allow pasting` to allow pasting cde into the console
-4. Copy the code above and paste it into the console
+1. Open the module tab of the course you want to export
+    i.e. `https://awsacademy.instructure.com/courses/{id}/modules`
+3. Open developer console and goto the console
+4. type in `allow pasting` to allow pasting cde into the console
+5. Copy the code above and paste it into the console
 
 ## Output Example
 
